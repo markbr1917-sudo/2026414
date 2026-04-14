@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 波兰阳台储能战略手册 V3.0 - 深度渠道版</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif+SC:wght@700&display=swap');
+        
+        :root {
+            --primary: #1e3a8a;
+            --accent: #f59e0b;
+            --success: #059669;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .serif-title { font-family: 'Noto Serif SC', serif; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .ai-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+
+        .status-pulse {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .step-number {
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-white/80 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="font-bold text-xl tracking-tight text-blue-900">POLAND <span class="text-amber-500">INSIGHT</span> 2026</div>
+            <div class="hidden md:flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#ai-consultant" class="hover:text-blue-700 transition">战略智库</a>
+                <a href="#channel-deep" class="text-blue-600">渠道渗透</a>
+                <a href="#roi-model" class="hover:text-blue-700 transition">财务模型</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center px-3 py-1 mb-6 text-[10px] font-bold bg-blue-100 text-blue-700 rounded-full">
+                <span class="status-pulse"></span> 系统实时在线
+            </div>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 serif-title leading-tight">
+                全面渗透：<br/><span class="text-blue-800">波兰储能市场准入与渠道白皮书</span>
+            </h1>
+            <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed text-lg">
+                整合 PTPiREE 合规要求、Mój Prąd 6.0 补贴政策及本土三大分销层级实战逻辑。
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-24 space-y-16">
+
+        <!-- 1. 战略智库：多维准入模型 -->
+        <section id="ai-consultant" class="glass-card shadow-xl overflow-hidden">
+            <div class="ai-gradient p-6 text-white flex items-center justify-between">
+                <h2 class="font-bold flex items-center"><span class="mr-2">✨</span> 市场准入深度评估引擎</h2>
+                <span class="text-[10px] opacity-70 italic tracking-widest">LOGIC ENGINE V3.0</span>
+            </div>
+            <div class="p-8 grid lg:grid-cols-12 gap-10">
+                <div class="lg:col-span-4 space-y-6">
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">储能容量 (kWh)</label>
+                        <input id="p-cap" type="number" step="0.1" value="2.5" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">含税售价 (PLN)</label>
+                        <input id="p-price" type="number" value="4800" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold text-slate-400 uppercase mb-2">物流响应力</label>
+                        <select id="p-log" class="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                            <option value="3">波兰本地仓 (3日内)</option>
+                            <option value="10">欧盟调拨 (7-14日)</option>
+                            <option value="30">中国直发 (30日+)</option>
+                        </select>
+                    </div>
+                    <button onclick="analyzeMarket()" class="w-full py-4 ai-gradient text-white font-bold rounded-2xl shadow-lg shadow-blue-200 active:scale-95 transition-all">
+                        执行多维准入分析
+                    </button>
+                </div>
+                
+                <div id="report-box" class="lg:col-span-8 bg-slate-50 rounded-3xl p-8 border border-slate-100 hidden">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-2xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">准入评分</p>
+                            <p id="r-score" class="text-3xl font-black text-blue-900">--</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-2xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">补贴资格</p>
+                            <p id="r-subsidy" class="text-xs font-bold pt-2">--</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-2xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">库存周转建议</p>
+                            <p id="r-inv" class="text-xs font-bold pt-2">--</p>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-2xl border border-slate-100">
+                            <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">竞争红海度</p>
+                            <p id="r-comp" class="text-xs font-bold pt-2">--</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-blue-900 flex items-center">📝 渠道渗透战略建议</h4>
+                        <div id="r-advice" class="text-sm text-slate-600 leading-relaxed space-y-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 丰富版：渠道渗透矩阵 -->
+        <section id="channel-deep" class="space-y-10">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-black serif-title text-slate-900">全面渠道渗透矩阵</h2>
+                <p class="text-slate-400 max-w-xl mx-auto text-sm">不只是卖货，而是建立覆盖波兰全境的售后与信任网络</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 渠道 1: 头部大客户 -->
+                <div class="glass-card p-8 border-l-4 border-blue-900">
+                    <div class="step-number">01</div>
+                    <h3 class="text-xl font-bold mb-4">顶级分销商 (Tier 1)</h3>
+                    <p class="text-[11px] font-bold text-blue-700 uppercase mb-4 tracking-tighter">代表：Keno, Energynat, Grodno</p>
+                    <ul class="text-sm space-y-4 text-slate-600">
+                        <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> <strong>入驻门槛：</strong> 必须具备 PTPiREE 认证及本地 PLC/HEMS 兼容测试报告。</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> <strong>核心诉求：</strong> 极稳定的供应链和 60 天以上的账期支持。</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-500">✔</span> <strong>渗透技巧：</strong> 提供“首批样机免费试用”及针对其销售团队的波兰语在线培训。</li>
+                    </ul>
+                </div>
+
+                <!-- 渠道 2: 垂直安装商 -->
+                <div class="glass-card p-8 border-l-4 border-amber-500">
+                    <div class="step-number">02</div>
+                    <h3 class="text-xl font-bold mb-4">区域安装商 (Tier 2)</h3>
+                    <p class="text-[11px] font-bold text-amber-600 uppercase mb-4 tracking-tighter">规模：50-200人 区域集成公司</p>
+                    <ul class="text-sm space-y-4 text-slate-600">
+                        <li class="flex items-start"><span class="mr-2 text-amber-500">✔</span> <strong>核心诉求：</strong> 极简安装（15分钟完成）、零返修及本地技术支持。</li>
+                        <li class="flex items-start"><span class="mr-2 text-amber-500">✔</span> <strong>利润空间：</strong> 至少预留 25% 的安装利润，建议采用返现激励模式。</li>
+                        <li class="flex items-start"><span class="mr-2 text-amber-500">✔</span> <strong>渗透技巧：</strong> 在波兰 PV 论坛（如 Forum-Fotowoltaika）建立品牌专区。</li>
+                    </ul>
+                </div>
+
+                <!-- 渠道 3: 零售与电商 -->
+                <div class="glass-card p-8 border-l-4 border-emerald-500">
+                    <div class="step-number">03</div>
+                    <h3 class="text-xl font-bold mb-4">本土电商 (Tier 3)</h3>
+                    <p class="text-[11px] font-bold text-emerald-600 uppercase mb-4 tracking-tighter">平台：Allegro.pl, Morele</p>
+                    <ul class="text-sm space-y-4 text-slate-600">
+                        <li class="flex items-start"><span class="mr-2 text-emerald-500">✔</span> <strong>Allegro 技巧：</strong> 必须加入 "Smart!" 包邮计划，标题需含 "Magazyn Energii + Dotacja"。</li>
+                        <li class="flex items-start"><span class="mr-2 text-emerald-500">✔</span> <strong>风险预警：</strong> 注意 14 天无理由退货政策，需在波兰有退货接收仓库。</li>
+                        <li class="flex items-start"><span class="mr-2 text-emerald-500">✔</span> <strong>流量驱动：</strong> 与波兰本地能源博主（YouTube: Artha Energy 等）合作评测。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 财务模型：ROI 演练 -->
+        <section id="roi-model" class="ai-gradient p-12 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden">
+            <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2 space-y-8">
+                    <h2 class="text-3xl font-bold">交互式投资回报模型</h2>
+                    <p class="text-blue-100 text-sm opacity-80 leading-relaxed">
+                        基于 2026 年波兰平均电价 (1.35 PLN/kWh) 及 Mój Prąd 6.0 补贴政策进行测算。
+                    </p>
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-bold uppercase opacity-60"><span>终端售价 (PLN)</span><span id="v-p" class="text-amber-400">4,800</span></div>
+                            <input id="i-p" type="range" min="2000" max="12000" step="100" value="4800" class="w-full accent-amber-500">
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-bold uppercase opacity-60"><span>配置容量 (kWh)</span><span id="v-c" class="text-amber-400">2.5</span></div>
+                            <input id="i-c" type="range" min="1" max="10" step="0.5" value="2.5" class="w-full accent-amber-500">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 w-full grid grid-cols-1 gap-6">
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                        <p class="text-[10px] font-bold uppercase tracking-widest opacity-60 mb-2">政府现金返还 (补贴)</p>
+                        <p id="calc-s" class="text-4xl font-black text-amber-400">2,400 PLN</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                        <p class="text-[10px] font-bold uppercase tracking-widest opacity-60 mb-2">预计静态回本期</p>
+                        <p id="calc-r" class="text-6xl font-black">3.1 <span class="text-xl font-normal opacity-50">Years</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- 装饰背景 -->
+            <div class="absolute -right-20 -top-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-16 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-slate-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-4">Poland ESS Intelligence Guide</p>
+            <p class="text-slate-500 text-sm font-light">智者无界 · 渠道为先 · 清醒有温度</p>
+        </div>
+    </footer>
+
+    <script>
+        // ROI 逻辑
+        const iP = document.getElementById('i-p');
+        const iC = document.getElementById('i-c');
+        function calc() {
+            const p = parseFloat(iP.value);
+            const c = parseFloat(iC.value);
+            document.getElementById('v-p').innerText = p.toLocaleString();
+            document.getElementById('v-c').innerText = c;
+            
+            let s = (c >= 2) ? Math.min(p * 0.5, 16000) : 0;
+            let net = p - s;
+            let saving = c * 250 * 1.35; // 假设每kWh每年节约250度电，电价1.35
+            let roi = (saving > 0) ? (net / saving) : 0;
+
+            document.getElementById('calc-s').innerText = Math.round(s).toLocaleString() + " PLN";
+            document.getElementById('calc-r').innerHTML = roi.toFixed(1) + ' <span class="text-xl font-normal opacity-50">Years</span>';
+        }
+        [iP, iC].forEach(el => el.addEventListener('input', calc));
+        calc();
+
+        // 战略分析逻辑
+        function analyzeMarket() {
+            const cap = parseFloat(document.getElementById('p-cap').value);
+            const price = parseFloat(document.getElementById('p-price').value);
+            const log = parseInt(document.getElementById('p-log').value);
+            const rBox = document.getElementById('report-box');
+            
+            rBox.classList.remove('hidden');
+            
+            let score = 0;
+            if (cap >= 2) score += 40; else score += 10;
+            if (price < 5000) score += 30; else if (price < 7000) score += 15;
+            if (log <= 3) score += 30; else if (log <= 10) score += 15;
+
+            document.getElementById('r-score').innerText = score;
+            document.getElementById('r-subsidy').innerText = cap >= 2 ? "符合 (50%覆盖)" : "不符合 (需>2kWh)";
+            document.getElementById('r-subsidy').className = `text-xs font-bold pt-2 ${cap >= 2 ? 'text-emerald-600' : 'text-red-500'}`;
+            document.getElementById('r-inv').innerText = log <= 3 ? "低压力 (现货)" : "高风险 (断货预警)";
+            document.getElementById('r-comp').innerText = price < 4500 ? "蓝海 (价格优势)" : "红海 (需拼服务)";
+
+            let advice = `
+                <p>· <strong>准入提示：</strong> 您的产品得分为 ${score}。${score < 60 ? '核心风险在于价格偏高或物流过慢，建议主攻高溢价的小众 DIY 市场。' : '整体竞争力强，应优先联系 Keno 或 Energynat 签署分销协议。'}</p>
+                <p>· <strong>渠道动作：</strong> 基于您的物流周期 (${log}天)，${log > 7 ? '不建议直接对接小型安装商，因为他们无法承担长周期风险，应主攻预售制电商渠道。' : '建议在波兰西部建立前置仓，利用 48 小时交付作为谈判筹码。'}</p>
+                <p>· <strong>补贴利用：</strong> 配置为 ${cap}kWh，${cap >= 2 ? '完全符合 Mój Prąd 6.0，营销海报应放大“政府买单一半”的口号。' : '不符合补贴标准，建议将单机容量提升至 2kWh 以上，否则无法进入主流分销渠道。'}</p>
+            `;
+            document.getElementById('r-advice').innerHTML = advice;
+        }
+    </script>
+</body>
+</html>
